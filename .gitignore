@@ -22,3 +22,17 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+### Eclipse Project Files ###
+
+.classpath
+.project
+.settings
+.springBeans
+
+### Build Files ###
+
+bin
+target
+build/
+.gradle
