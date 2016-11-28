@@ -17,6 +17,7 @@ Este proyecto está basado en el proyecto [Spring Boot](http://projects.spring.i
 - Tomcat (La aplicación tiene este servidor embebido)
 - GNU / Linux
 - Un navegador web
+- [JUnit](http://junit.org/junit4/)
 
 ## Configuración de la base de datos
 Esta configuración se realiza automáticamente cuando se ejecuta el script `appministrator.sh` (tendrás que ingresar tu contraseña de root de MySQL). El rollback también se ejecuta automáticamente con el script `rollback.sh`
