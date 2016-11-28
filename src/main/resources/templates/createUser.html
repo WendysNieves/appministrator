@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Crear usuario</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	
+    	<link rel="stylesheet" type="text/css" media="all" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.css" />
+    	<link rel="stylesheet" type="text/css" media="all" href="/css/starter-template.css" />
+	</head>
+	<body>
+		<div th:replace="fragments/common :: navbar"></div>	
+	
+		<div class="container">						
+			<div class="starter-template">
+				<h1>Crear usuario</h1>				
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">								
+							<form id="register-form" method="post" role="form">
+								<div class="form-group">
+									<input type="text" name="name" id="name" tabindex="1"
+										class="form-control" placeholder="Nombres" value=""
+										data-validation="custom"
+										data-validation-regexp="^[A-Za-z]$|^[A-Za-z][A-Za-z ]{0,48}[A-Za-z]$"
+										data-validation-error-msg-custom="Campo alfanumérico obligatorio de máximo 50 caracteres" />
+								</div>
+								<div class="form-group">
+									<input type="text" name="lastName" id="lastName" tabindex="2"
+										class="form-control" placeholder="Apellidos" value=""
+										data-validation="custom"
+										data-validation-regexp="^[A-Za-z]$|^[A-Za-z][A-Za-z ]{0,48}[A-Za-z]$"
+										data-validation-error-msg-custom="Campo alfanumérico obligatorio de máximo 50 caracteres" />
+								</div>
+								<div class="form-group">
+								<input type="text" name="identification" id="identification"
+									tabindex="3" class="form-control" placeholder="Cédula" value=""
+									data-validation="number length required"
+									data-validation-length='max10'
+									data-validation-error-msg-number="La cédula debe contener solo números, sin espacios"
+									data-validation-error-msg-length="La cédula no puede tener más de 10 caracteres"
+									data-validation-error-msg-required="La cédula es obligatoria" />
+							</div>
+								<div class="form-group">
+									<input type="email" name="email" id="email" tabindex="4"
+										class="form-control" placeholder="Correo electrónico" value=""
+										data-validation="email length required"
+										data-validation-length='max50'
+										data-validation-error-msg-email="La dirección de correo es inválida"
+										data-validation-error-msg-length="La dirección de correo no puede tener más de 50 caracteres"
+										data-validation-error-msg-required="La dirección de correo es obligatoria" />
+								</div>
+								<div class="form-group">
+									<input type="text" name="cellphone" id="cellphone" tabindex="5"
+										class="form-control" placeholder="Celular"
+										data-validation="custom"
+										data-validation-regexp="^3[0-9]{9}$"
+										data-validation-error-msg-custom="Campo numérico de 10 dígitos que inicie por 3" />
+								</div>								
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm-2 col-sm-offset-5">
+											<input type="submit" id="register-submit" tabindex="6" class="form-control btn btn-success" value="Crear" />
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	        	
+	  	
+	  	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>	
+	  	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.2.43/jquery.form-validator.min.js"></script>  	
+	  	<script type="text/javascript" src="/js/create_user.js"></script>
+	</body>
+</html>

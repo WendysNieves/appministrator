@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<nav th:fragment="navbar" class="navbar navbar-fixed-top navbar-dark bg-inverse">
+   		<a class="navbar-brand" th:href="@{/}">Appministrator</a>
+   		<ul class="nav navbar-nav">
+ 			<li class="nav-item">
+   				<a class="nav-link" href="/user">Crear usuario</a>
+ 			</li>	    
+ 			<li th:if="*{generateUsers}" class="nav-item">
+ 				<a class="nav-link" href="javascript:void(0);" id="generate-users">Generar usuarios</a>
+ 			</li>
+		</ul>  			
+   	</nav>
+</body>
+</html>
