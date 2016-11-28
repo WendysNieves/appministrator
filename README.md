@@ -9,7 +9,6 @@ Este proyecto está basado en el proyecto [Spring Boot](http://projects.spring.i
 - Spring MVC (Tomcat)
 - [Thymleaf](http://www.thymeleaf.org/)
 - [DataTables](https://datatables.net/)
-- [JUnit](http://junit.org/junit4/)
 
 ## Requisitos
 - Java 8 (JDK 1.8)
